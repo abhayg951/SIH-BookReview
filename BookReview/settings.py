@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+
+
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -37,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
-    'rest_framework'
+    'rest_framework',
+    'cloudinary_storage',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -147,3 +151,26 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Cloudinary setup
+
+# import cloudinary
+# import cloudinary.uploader
+import cloudinary.api
+# import cloudinary_storage
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dyjmrsdtx',
+    'API_KEY': '437433541894393',
+    'API_SECRET': 'Wmq-v2PDChJGzx_-jmxiywkDayI',
+}
+
+cloudinary.config(
+    cloud_name="dyjmrsdtx",
+    api_key="437433541894393",
+    api_secret="Wmq-v2PDChJGzx_-jmxiywkDayI",
+    secure=True
+)
+
+MEDIA_URL = '/media/'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
