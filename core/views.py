@@ -24,7 +24,7 @@ class BookList(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-class BookDetails(APIView):
+class SingleBookDetails(APIView):
     @staticmethod
     def get_object(slug):
         try:
