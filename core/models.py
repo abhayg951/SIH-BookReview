@@ -10,7 +10,7 @@ class Book(models.Model):
     publisher = models.CharField(max_length=200, null=False, blank=False)
     number_of_pages = models.IntegerField()
     image = models.ImageField(upload_to="static/images/", null=True)
-    slug = models.SlugField(max_length=200)
+    slug = models.SlugField(max_length=200, null=True)
     uploading_date = models.DateField(auto_now=True)
 
     def __str__(self):
