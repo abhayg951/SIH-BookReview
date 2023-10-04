@@ -87,12 +87,12 @@ WSGI_APPLICATION = 'BookReview.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'URL': "postgresql://postgres:w45uqNc98lQeOZOoXhW3@containers-us-west-153.railway.app:6012/railway",
+        'URL': "postgresql://postgres:wqbG2BFLOY3CX9zrjOJC@containers-us-west-156.railway.app:7507/railway",
         'NAME': "railway",
         'USER': "postgres",
-        'PASSWORD': "w45uqNc98lQeOZOoXhW3",
-        'HOST': "containers-us-west-153.railway.app",
-        'PORT': 6012,
+        'PASSWORD': "wqbG2BFLOY3CX9zrjOJC",
+        'HOST': "containers-us-west-156.railway.app",
+        'PORT': 7507,
     }
 }
 
